@@ -21,7 +21,6 @@
 | Mega Pin | Component |
 |---|---|
 | Digital 10 | Red LED |
-| Digital 6 | Yellow LED |
 | Digital 3 | Green LED |
 
 ## Detection Flow
