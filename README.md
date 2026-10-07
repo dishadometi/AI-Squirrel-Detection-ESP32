@@ -65,6 +65,7 @@ The system works in several steps:
                  └─────────┬───┬───────┘
                            │   │
                           🔴  🟢
+```text
 ---
 
 I trained the squirrel detection model using Edge Impulse.
@@ -81,7 +82,7 @@ The results reported by Edge Impulse were:
 
 The 81.5% test-set accuracy is the result reported by Edge Impulse for the test dataset. It does not mean that the system will have the same accuracy in every real-world situation. Factors such as lighting, distance, background, and camera angle can affect detection.
 
-----
+---
 
 ### LED Status
 
@@ -92,7 +93,7 @@ The 81.5% test-set accuracy is the result reported by Edge Impulse for the test 
 
 The red LED turns on when a squirrel is detected. The green LED turns on when no squirrel is detected.
 
-----
+---
 
 ### Hardware
 
@@ -106,7 +107,7 @@ The main components I used are:
 - Jumper wires
 The ESP32-S3 uses 3.3V logic and the Arduino Mega uses 5V logic, so I used the BOB-12009 to safely transfer the detection signal between the two boards.
 
-----
+---
 
 ### Testing
 
@@ -115,7 +116,7 @@ I first tested the LEDs on the Arduino Mega. I then tested Digital Pin 7 using H
 After that, I tested the ESP32 GPIO1 output and the camera. Once the individual parts were working, I connected the ESP32-S3, level shifter, and Arduino Mega together.
 I also tested the Edge Impulse model on the ESP32-S3 to make sure that the AI prediction could control the physical LEDs.
 
-----
+---
 
 ### Challenges
 
