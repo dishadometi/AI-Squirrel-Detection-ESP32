@@ -56,13 +56,22 @@ The system follows this process:
                           D7
                             │
                             ▼
-                 ┌─────────────────────┐
-                 │   Arduino Mega      │
-                 │                     │
-                 │   LED Controller    │
-                 └──────┬──┬──┬────────┘
-                        │  │  │
-                       🔴 🟡 🟢
+                 ┌────────────────────┐
+                 │   Arduino Mega     │
+                 │                    │
+                 │   LED Controller   │
+                 └──────┬──┬──────────┘
+                        │  │
+                       🔴 🟢
+
+### LED Status
+
+| Mega Pin | LED | Function |
+|:---|:---|:---|
+| **D10** | **Red** | Squirrel detected |
+| **D3** | **Green** | No squirrel detected |
+
+The red LED turns on when a squirrel is detected. The green LED turns on when no squirrel is detected.
 
 ---
 
