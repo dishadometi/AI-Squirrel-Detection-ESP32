@@ -1,39 +1,41 @@
-# 🐿️ AI-Based Squirrel Detection System
+# AI-Based Squirrel Detection System
 
-An embedded AI system that uses an **ESP32-S3 camera** and a machine-learning model trained with **Edge Impulse** to detect squirrels in real time.
+I built this project to detect squirrels using an ESP32-S3 camera and a machine-learning model trained with Edge Impulse.
 
-When a squirrel is detected, the ESP32-S3 sends a signal to an **Arduino Mega 2560**, which controls red, yellow, and green LEDs to indicate the detection status.
+The ESP32-S3 captures an image and runs the AI model to determine whether a squirrel is present. When a squirrel is detected, the ESP32-S3 sends a signal to an Arduino Mega 2560. The Mega then turns on a red LED. When no squirrel is detected, the green LED turns on.
+
+This project allowed me to work with machine learning, computer vision, embedded programming, electronics, and communication between two different microcontrollers.
 
 ---
 
-## 🎯 Project Goal
+## Project Goal
 
-The goal of this project is to combine:
+My goal was to build a working system that could take an image, use an AI model to detect a squirrel, and then show the result using physical LEDs.
+
+The project combines:
 
 - Computer vision
 - Machine learning
 - Embedded AI
 - ESP32-S3 camera hardware
-- Arduino hardware
+- Arduino Mega hardware
 - 3.3V-to-5V logic-level communication
-
-into a complete real-world animal detection system.
 
 ---
 
-## 🧠 How It Works
+## How It Works
 
-The system follows this process:
+The system works in several steps:
 
 1. The ESP32-S3 CAM captures an image.
 2. The Edge Impulse machine-learning model analyzes the image.
 3. The model classifies the image as either:
    - `squirrel`
    - `non squirrel`
-4. If the squirrel confidence reaches the detection threshold, ESP32 GPIO1 is set HIGH.
-5. The GPIO signal passes through a bidirectional logic-level converter.
-6. The Arduino Mega reads the signal on digital pin 7.
-7. The Mega controls the status LEDs.
+4. If the squirrel confidence reaches the detection threshold of **0.50**, the ESP32 sets GPIO1 HIGH.
+5. The signal passes through a BOB-12009 logic-level converter.
+6. The Arduino Mega reads the signal on Digital Pin 7.
+7. The Mega turns on the appropriate LED.
 
 ### System Architecture
 
@@ -44,25 +46,42 @@ The system follows this process:
                  │ Camera + AI Model   │
                  └──────────┬──────────┘
                             │
-                         GPIO 1
+                         GPIO1
                             │
                             ▼
                  ┌─────────────────────┐
-                 │  Logic Level        │
+                 │  BOB-12009 Level    │
                  │  Converter          │
                  │  3.3V → 5V          │
                  └──────────┬──────────┘
                             │
-                          D7
+                           D7
                             │
                             ▼
-                 ┌────────────────────┐
-                 │   Arduino Mega     │
-                 │                    │
-                 │   LED Controller   │
-                 └──────┬──┬──────────┘
-                        │  │
-                       🔴 🟢
+                 ┌─────────────────────┐
+                 │    Arduino Mega     │
+                 │                     │
+                 │   LED Controller    │
+                 └─────────┬───┬───────┘
+                           │   │
+                          🔴  🟢
+
+### System Architecture
+
+I trained the squirrel detection model using Edge Impulse.
+
+The dataset contains 140 images with two classes:
+- squirrel
+- non squirrel
+The results reported by Edge Impulse were:
+
+| Result | Accuracy |
+|:---|---:|
+| **Validation accuracy** | **65.2%** |
+| **Test-set accuracy** | **81.5%** |
+
+
+The 81.5% test-set accuracy is the result reported by Edge Impulse for the test dataset. It does not mean that the system will have the same accuracy in every real-world situation. Factors such as lighting, distance, background, and camera angle can affect detection.
 
 ### LED Status
 
@@ -72,6 +91,38 @@ The system follows this process:
 | **D3** | **Green** | No squirrel detected |
 
 The red LED turns on when a squirrel is detected. The green LED turns on when no squirrel is detected.
+
+### Hardware
+The main components I used are:
+- ESP32-S3 CAM V1.2
+- Arduino Mega 2560
+- SparkFun BOB-12009 logic-level converter
+- Red LED
+- Green LED
+- Resistors
+- Jumper wires
+The ESP32-S3 uses 3.3V logic and the Arduino Mega uses 5V logic, so I used the BOB-12009 to safely transfer the detection signal between the two boards.
+
+Testing
+
+I tested the project one part at a time before putting the complete system together.
+I first tested the LEDs on the Arduino Mega. I then tested Digital Pin 7 using HIGH and LOW signals to make sure the Mega could correctly respond to the ESP32 signal.
+After that, I tested the ESP32 GPIO1 output and the camera. Once the individual parts were working, I connected the ESP32-S3, level shifter, and Arduino Mega together.
+I also tested the Edge Impulse model on the ESP32-S3 to make sure that the AI prediction could control the physical LEDs.
+
+Challenges
+
+I ran into several problems while building the project.
+
+One challenge was connecting the ESP32-S3 and Arduino Mega because they use different logic voltage levels. I used the BOB-12009 level converter to handle the 3.3V-to-5V signal.
+
+I also had a compilation problem with the Edge Impulse ESP-NN library while trying to build the ESP32-S3 firmware. I had to troubleshoot the library configuration before I could successfully compile the project.
+
+Another problem happened when I tested the Mega input. When Digital Pin 7 was not connected to a defined signal, the input could randomly read HIGH or LOW. I learned that this was caused by a floating input.
+
+I also experienced camera capture problems during development and had to troubleshoot the ESP32 power and USB setup.
+
+Working through these problems helped me understand how the software, hardware, power, and communication parts of the project all depend on each other.
 
 ---
 
