@@ -65,14 +65,16 @@ The system works in several steps:
                  └─────────┬───┬───────┘
                            │   │
                           🔴  🟢
-```text
----
+```
+## 🧠 Machine Learning
 
 I trained the squirrel detection model using Edge Impulse.
 
 The dataset contains 140 images with two classes:
-- squirrel
-- non squirrel
+
+- `squirrel`
+- `non squirrel`
+
 The results reported by Edge Impulse were:
 
 | Result | Accuracy |
@@ -98,6 +100,7 @@ The red LED turns on when a squirrel is detected. The green LED turns on when no
 ### Hardware
 
 The main components I used are:
+
 - ESP32-S3 CAM V1.2
 - Arduino Mega 2560
 - SparkFun BOB-12009 logic-level converter
@@ -105,6 +108,7 @@ The main components I used are:
 - Green LED
 - Resistors
 - Jumper wires
+
 The ESP32-S3 uses 3.3V logic and the Arduino Mega uses 5V logic, so I used the BOB-12009 to safely transfer the detection signal between the two boards.
 
 ---
@@ -112,8 +116,11 @@ The ESP32-S3 uses 3.3V logic and the Arduino Mega uses 5V logic, so I used the B
 ### Testing
 
 I tested the project one part at a time before putting the complete system together.
+
 I first tested the LEDs on the Arduino Mega. I then tested Digital Pin 7 using HIGH and LOW signals to make sure the Mega could correctly respond to the ESP32 signal.
+
 After that, I tested the ESP32 GPIO1 output and the camera. Once the individual parts were working, I connected the ESP32-S3, level shifter, and Arduino Mega together.
+
 I also tested the Edge Impulse model on the ESP32-S3 to make sure that the AI prediction could control the physical LEDs.
 
 ---
@@ -137,13 +144,17 @@ Working through these problems helped me understand how the software, hardware, 
 ## 📸 Project Photos
 
 ### Complete System
+
 ![Complete system](photos/system-overview.jpg)
 
 ### ESP32-S3 Camera
+
 ![ESP32-S3 camera](photos/esp32-camera.jpg)
 
 ### Logic-Level Converter
+
 ![Logic-level converter](photos/level-shifter.jpg)
 
 ### Squirrel Detection
+
 ![Squirrel detection](photos/squirrel-detection.jpg)
