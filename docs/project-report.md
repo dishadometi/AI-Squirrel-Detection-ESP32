@@ -196,23 +196,24 @@ The GitHub repository contains the source code, hardware documentation, project 
 
 The repository is organized like this:
 
+```text
 AI-Squirrel-Detection-ESP32/
-│
 ├── README.md
 ├── firmware/
 │   ├── ESP32/
 │   │   └── Squirrel_ESP32.ino
 │   └── Arduino-Mega/
 │       └── Squirrel_Mega.ino
-│
 ├── hardware/
 │   └── wiring-diagram.md
-│
 ├── photos/
-│
+│   ├── system-overview.jpg
+│   ├── esp32-camera.jpg
+│   ├── level-shifter.jpg
+│   └── squirrel-detection.jpg
 ├── docs/
 │   └── project-report.md
-│
 └── LICENSE
+```
 
 Overall, this project gave me experience with machine learning, embedded programming, electronics, hardware communication, and debugging. The most useful part for me was not just getting the final LEDs to work, but figuring out the problems along the way and understanding why each part of the system was needed.
