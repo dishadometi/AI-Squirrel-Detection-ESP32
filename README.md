@@ -63,3 +63,19 @@ The system follows this process:
                  └──────┬──┬──┬────────┘
                         │  │  │
                        🔴 🟡 🟢
+
+---
+
+## 📸 Project Photos
+
+### Complete System
+![Complete system](photos/system-overview.jpg)
+
+### ESP32-S3 Camera
+![ESP32-S3 camera](photos/esp32-camera.jpg)
+
+### Logic-Level Converter
+![Logic-level converter](photos/level-shifter.jpg)
+
+### Squirrel Detection
+![Squirrel detection](photos/squirrel-detection.jpg)
