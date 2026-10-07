@@ -56,10 +56,10 @@ The system follows this process:
                           D7
                             │
                             ▼
-                 ┌────────────────────┐
-                 │   Arduino Mega     │
-                 │                    │
-                 │   LED Controller   │
-                 └──────┬──┬──────────┘
-                        │  │  
-                       🔴 🟢
+                 ┌─────────────────────┐
+                 │   Arduino Mega      │
+                 │                     │
+                 │   LED Controller    │
+                 └──────┬──┬──┬────────┘
+                        │  │  │
+                       🔴 🟡 🟢
