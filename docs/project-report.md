@@ -75,7 +75,6 @@ Arduino Mega D7 → BOB-12009 HV1
 
 For the LEDs, I used:
 Mega D10 → Red LED
-Mega D6  → Yellow LED
 Mega D3  → Green LED
 
 5. Squirrel Detection
