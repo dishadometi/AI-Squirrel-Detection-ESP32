@@ -1,8 +1,8 @@
 # AI-Based Squirrel Detection System
 
-I built this project to detect squirrels using an ESP32-S3 camera and a machine-learning model trained with Edge Impulse.
+An AI-powered squirrel detection system built using an ESP32-S3 CAM, Edge Impulse, and an Arduino Mega 2560.
 
-The ESP32-S3 captures an image and runs the AI model to determine whether a squirrel is present. When a squirrel is detected, the ESP32-S3 sends a signal to an Arduino Mega 2560. The Mega then turns on a red LED. When no squirrel is detected, the green LED turns on.
+I built this project to detect squirrels using a camera and a machine-learning model trained with Edge Impulse. The ESP32-S3 captures an image and runs the AI model to determine whether a squirrel is present. When a squirrel is detected, the ESP32-S3 sends a signal to an Arduino Mega 2560, which turns on a red LED. When no squirrel is detected, the green LED turns on.
 
 This project allowed me to work with machine learning, computer vision, embedded programming, electronics, and communication between two different microcontrollers.
 
