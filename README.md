@@ -209,6 +209,16 @@ This repository contains my ESP32-S3 and Arduino Mega firmware, hardware documen
 
 [View the GitHub Repository](https://github.com/dishadometi/AI-Squirrel-Detection-ESP32/tree/main)
 
+## Project Status
+
+The main detection system is working.
+
+The ESP32-S3 CAM captures images and runs the Edge Impulse model. When a squirrel is detected, the ESP32 sends a HIGH signal through the level shifter to the Arduino Mega, which turns on the red LED. When no squirrel is detected, the green LED turns on.
+
+I tested the camera, AI inference, GPIO signal, level shifter, Arduino input, and LED outputs separately before testing the complete system.
+
+**Current status: Working prototype**
+
 ## Future Improvements
 
 There are several things I would like to improve if I continue working on this project.
