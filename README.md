@@ -186,6 +186,8 @@ AI-Squirrel-Detection-ESP32/
 │   └── project-report.md
 └── LICENSE
 
+```
+
 ## Project Links
 
 ### Edge Impulse
