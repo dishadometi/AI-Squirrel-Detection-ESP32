@@ -196,7 +196,7 @@ The GitHub repository contains the source code, hardware documentation, project 
 
 GitHub:
 
-[AI-Squirrel-Detection-ESP32](YOUR_GITHUB_REPOSITORY_URL)
+[AI-Squirrel-Detection-ESP32](https://github.com/dishadometi/AI-Squirrel-Detection-ESP32/tree/main)
 
 The repository is organized like this:
 
