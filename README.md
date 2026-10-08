@@ -160,7 +160,14 @@ Working through these problems helped me understand how the software, hardware, 
 ![Squirrel detection](photos/squirrel-detection.jpeg)
 
 ---
+## Demo
 
+The system works by running the AI model on the ESP32-S3 CAM and sending the detection result to the Arduino Mega.
+
+- 🟢 **Green LED:** No squirrel detected
+- 🔴 **Red LED:** Squirrel detected
+
+The ESP32-S3 performs the image classification, and the Arduino Mega displays the result using the LEDs.
 ---
 
 ## Project Structure
