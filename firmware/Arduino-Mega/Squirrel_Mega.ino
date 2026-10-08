@@ -13,8 +13,8 @@ void setup() {
 
   // Start with all LEDs OFF
   digitalWrite(RED_LED, LOW);
-  digitalWrite(GREEN_LED, LOW);
   digitalWrite(YELLOW_LED, LOW);
+  digitalWrite(GREEN_LED, LOW);
 
   Serial.begin(9600);
 
