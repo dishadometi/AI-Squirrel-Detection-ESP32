@@ -66,7 +66,7 @@ The system works in several steps:
                            │   │
                           🔴  🟢
 ```
-## 🧠 Machine Learning
+## Machine Learning
 
 I trained the squirrel detection model using Edge Impulse.
 
@@ -158,3 +158,30 @@ Working through these problems helped me understand how the software, hardware, 
 ### Squirrel Detection
 
 ![Squirrel detection](photos/squirrel-detection.jpg)
+
+---
+
+---
+
+## Project Structure
+
+The repository is organized like this:
+
+```text
+AI-Squirrel-Detection-ESP32/
+├── README.md
+├── firmware/
+│   ├── ESP32/
+│   │   └── Squirrel_ESP32.ino
+│   └── Arduino-Mega/
+│       └── Squirrel_Mega.ino
+├── hardware/
+│   └── wiring-diagram.md
+├── photos/
+│   ├── system-overview.jpg
+│   ├── esp32-camera.jpg
+│   ├── level-shifter.jpg
+│   └── squirrel-detection.jpg
+├── docs/
+│   └── project-report.md
+└── LICENSE
