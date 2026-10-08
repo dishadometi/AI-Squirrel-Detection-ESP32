@@ -4,7 +4,7 @@ This folder contains photos documenting the physical implementation and testing 
 
 ## Photos
 
-- `system-overview.jpg` — Complete system with ESP32-S3, level shifter, Arduino Mega, and LEDs.
-- `esp32-camera.jpg` — ESP32-S3 CAM close-up.
-- `level-shifter.jpg` — BOB-12009 logic-level converter wiring.
-- `squirrel-detection.jpg` — Squirrel detection demonstration with the red LED activated.
+- `photos/system-overview.jpeg` — Complete system with ESP32-S3, level shifter, Arduino Mega, and LEDs.
+- `photos/esp32-camera.jpeg` — ESP32-S3 CAM close-up.
+- `photos/level-shifter.jpeg` — BOB-12009 logic-level converter wiring.
+- `photos/squirrel-detection.jpeg` — Squirrel detection demonstration with the red LED activated.
