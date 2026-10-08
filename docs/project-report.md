@@ -1,6 +1,6 @@
-# AI-Based Squirrel Detection System
+# **AI-Based Squirrel Detection System**
 
-1. Project Overview
+## **1. Project Overview**
 
 I built this project to detect squirrels using a camera and an AI model. The main idea was to use an ESP32-S3 CAM to take pictures and use a machine-learning model to decide whether a squirrel is in the picture or not.
 
@@ -10,7 +10,7 @@ After the ESP32 makes the detection, it sends a signal to an Arduino Mega. The A
 
 One of the main reasons I wanted to build this project was to learn how AI can actually be connected to physical hardware instead of only running as software on a computer.
 
-2. How the System Works
+## **2. How the System Works**
 
 The project has two main parts. The first part is the ESP32-S3 CAM, which handles the camera and AI detection. The second part is the Arduino Mega, which handles the LEDs.
 
@@ -37,7 +37,7 @@ LED
 
 I used the level shifter because the ESP32-S3 uses 3.3V logic while the Arduino Mega uses 5V logic.
 
-3. Machine Learning
+## **3. Machine Learning**
 
 I trained the machine-learning part of the project using Edge Impulse. I used 140 images for the project and created two classes: squirrel and non squirrel.
 
@@ -54,7 +54,7 @@ After training the model, I deployed it to the ESP32-S3 using the Edge Impulse A
 
 This was one of the parts of the project I found most interesting because I could actually see the machine-learning model running on a small physical device.
 
-4. Hardware
+## **4. Hardware**
 
 The main hardware I used was an ESP32-S3 CAM V1.2, an Arduino Mega 2560, and a SparkFun BOB-12009 logic-level converter.
 
@@ -77,7 +77,7 @@ For the LEDs, I used:
 Mega D10 → Red LED
 Mega D3  → Green LED
 
-5. Squirrel Detection
+## **5. Squirrel Detection**
 
 When the ESP32-S3 takes a picture, the Edge Impulse model analyzes the image.
 
@@ -107,7 +107,7 @@ Red LED turns ON
 
 If the confidence is below the threshold, the ESP32 sends LOW and the green LED turns on.
 
-6. LED Status System
+## **6. LED Status System**
 
 I used two LEDs to show the result of the squirrel detection.
 
@@ -124,7 +124,7 @@ This gives me a simple visual way to see the AI result without having to look at
 
 This makes the project easier to understand when looking at the physical hardware because the AI result is shown directly through the LEDs.
 
-7. Problems I Ran Into
+## **7. Problems I Ran Into**
 
 This project did not work perfectly on the first try. I had to troubleshoot both the software and the hardware.
 
@@ -138,7 +138,7 @@ I also had camera capture problems during testing. The ESP32 produced camera err
 
 These problems were actually an important part of the project for me because I had to test each part separately instead of assuming that the entire system would work immediately.
 
-8. Testing
+## **8. Testing**
 
 I tested the project in stages.
 
@@ -154,6 +154,8 @@ Finally, I tested the camera and Edge Impulse model together.
 
 The complete system was tested as:
 
+```text
+
 Camera
   ↓
 AI model
@@ -166,9 +168,11 @@ Mega D7
   ↓
 LED
 
+```
+
 Testing the system one part at a time helped me figure out where problems were coming from instead of trying to debug everything at once.
 
-9. What I Would Improve
+## **9. What I Would Improve**
 
 There are several things I would like to improve if I continue working on this project.
 
@@ -182,7 +186,7 @@ I would also like to add wireless notifications. For example, the ESP32 could se
 
 In the future, I could also add a weather-resistant enclosure and make the system suitable for being installed outside for longer periods of time.
 
-10. Project Links and Files
+## **10. Project Links and Files**
 
 I documented the project using Edge Impulse and GitHub.
 
