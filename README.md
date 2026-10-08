@@ -185,3 +185,33 @@ AI-Squirrel-Detection-ESP32/
 ├── docs/
 │   └── project-report.md
 └── LICENSE
+
+## Project Links
+
+### Edge Impulse
+
+The Edge Impulse project contains my dataset, machine-learning model, training information, and evaluation results.
+
+[View the Edge Impulse Project](https://studio.edgeimpulse.com/public/1121907/latest)
+
+### GitHub
+
+This repository contains my ESP32-S3 and Arduino Mega firmware, hardware documentation, project photos, and project report.
+
+[View the GitHub Repository](https://github.com/dishadometi/AI-Squirrel-Detection-ESP32/tree/main)
+
+## Future Improvements
+
+There are several things I would like to improve if I continue working on this project.
+
+- **Larger training dataset:** Add more squirrel and non-squirrel images with different backgrounds, lighting conditions, distances, and camera angles.
+
+- **Real outdoor testing:** Test the system outside with real squirrels instead of mainly testing with images during development.
+
+- **More animal classes:** Expand the model so it can recognize other animals instead of only squirrel versus non-squirrel.
+
+- **Wireless notifications:** Add a way for the ESP32 to send a notification to a phone when a squirrel is detected.
+
+- **Outdoor enclosure:** Build a weather-resistant enclosure so the system could be used outside for longer periods of time.
+
+- **Improve detection reliability:** Experiment with different model settings and detection thresholds to reduce incorrect detections.
