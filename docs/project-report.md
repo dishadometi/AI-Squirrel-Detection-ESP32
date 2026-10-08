@@ -4,9 +4,9 @@
 
 I built this project to detect squirrels using a camera and an AI model. The main idea was to use an ESP32-S3 CAM to take pictures and use a machine-learning model to decide whether a squirrel is in the picture or not.
 
-I used Edge Impulse to train the AI model. The model has two categories: squirrel and non squirrel.
+I used Edge Impulse to train the AI model. The model has two classes: squirrel and non squirrel.
 
-After the ESP32 makes the detection, it sends a signal to an Arduino Mega. The Arduino Mega controls three LEDs. A red LED turns on when a squirrel is detected, and a green LED turns on when there is no squirrel.
+After the ESP32 makes the detection, it sends a signal to an Arduino Mega. The Arduino Mega controls two LEDs. A red LED turns on when a squirrel is detected, and a green LED turns on when there is no squirrel.
 
 One of the main reasons I wanted to build this project was to learn how AI can actually be connected to physical hardware instead of only running as software on a computer.
 
@@ -58,7 +58,7 @@ This was one of the parts of the project I found most interesting because I coul
 
 The main hardware I used was an ESP32-S3 CAM V1.2, an Arduino Mega 2560, and a SparkFun BOB-12009 logic-level converter.
 
-I also used three LEDs to show the detection status.
+I also used two LEDs to show the detection status.
 
 The ESP32-S3 is responsible for taking the camera image and running the AI model. I used GPIO1 as the output signal from the ESP32.
 
@@ -193,6 +193,10 @@ Edge Impulse:
 https://studio.edgeimpulse.com/public/1121907/latest
 
 The GitHub repository contains the source code, hardware documentation, project photos, and project report.
+
+GitHub:
+
+[AI-Squirrel-Detection-ESP32](YOUR_GITHUB_REPOSITORY_URL)
 
 The repository is organized like this:
 
