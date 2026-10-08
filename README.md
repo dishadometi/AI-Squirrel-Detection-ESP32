@@ -145,19 +145,19 @@ Working through these problems helped me understand how the software, hardware, 
 
 ### Complete System
 
-![Complete system](photos/system-overview.jpg)
+![Complete system](photos/system-overview.jpeg)
 
 ### ESP32-S3 Camera
 
-![ESP32-S3 camera](photos/esp32-camera.jpg)
+![ESP32-S3 camera](photos/esp32-camera.jpeg)
 
 ### Logic-Level Converter
 
-![Logic-level converter](photos/level-shifter.jpg)
+![Logic-level converter](photos/level-shifter.jpeg)
 
 ### Squirrel Detection
 
-![Squirrel detection](photos/squirrel-detection.jpg)
+![Squirrel detection](photos/squirrel-detection.jpeg)
 
 ---
 
